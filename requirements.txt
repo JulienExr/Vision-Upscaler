@@ -1,3 +1,4 @@
 torch
 kagglehub
 numpy
+torchvision
