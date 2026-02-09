@@ -143,7 +143,11 @@ class Decoder(nn.Module):
         
         return x
     
-
+def build_autoencoder(in_channels, out_channels):
+    encoder = Encoder(in_channels)
+    decoder = Decoder(in_channels, out_channels)
+    autoencoder = Autoencoder(encoder, decoder)
+    return autoencoder
 
 if __name__ == "__main__":
     channels = 3
